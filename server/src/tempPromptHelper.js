@@ -5,3 +5,4 @@ export function scoreAnswerRubric(clarity, depth, accuracy) { return Math.round(
 export const DIFFICULTY_LEVELS = ['easy', 'medium', 'hard'];
 export function formatQuizPayload(questions) { return questions.map((q, idx) => ({ id: idx + 1, ...q })); }
 export function calculateStudyStreak(dates) { return Array.isArray(dates) ? dates.length : 0; }
+export const MAX_PROMPT_TOKENS = 1500;
