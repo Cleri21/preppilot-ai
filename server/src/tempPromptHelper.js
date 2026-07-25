@@ -6,3 +6,4 @@ export const DIFFICULTY_LEVELS = ['easy', 'medium', 'hard'];
 export function formatQuizPayload(questions) { return questions.map((q, idx) => ({ id: idx + 1, ...q })); }
 export function calculateStudyStreak(dates) { return Array.isArray(dates) ? dates.length : 0; }
 export const MAX_PROMPT_TOKENS = 1500;
+export function sanitizeStudentInput(text) { return String(text || '').trim().slice(0, MAX_PROMPT_TOKENS); }
