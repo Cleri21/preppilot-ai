@@ -7,3 +7,4 @@ export function formatQuizPayload(questions) { return questions.map((q, idx) => 
 export function calculateStudyStreak(dates) { return Array.isArray(dates) ? dates.length : 0; }
 export const MAX_PROMPT_TOKENS = 1500;
 export function sanitizeStudentInput(text) { return String(text || '').trim().slice(0, MAX_PROMPT_TOKENS); }
+export function buildStudyPlanTemplate(weeks, targetRole) { return { weeks, targetRole, modules: [] }; }
