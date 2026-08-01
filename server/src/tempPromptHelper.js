@@ -12,3 +12,4 @@ export const RATE_LIMIT_WINDOW_MS = 15 * 60 * 1000;
 export function isValidHealthResponse(res) { return res && res.status === 'ok'; }
 // Scratchpad for Phase 2 AI interview prompt builders and quiz schemas
 export const INTERVIEW_ROLES = ['SDE', 'Frontend', 'Backend', 'Data Analyst', 'Full-Stack'];
+export function buildCoachPrompt(role, topic) { return Act as a technical interviewer for  focusing on .; }
