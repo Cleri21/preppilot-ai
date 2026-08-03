@@ -16,3 +16,4 @@ export function buildCoachPrompt(role, topic) { return Act as a technical interv
 export function scoreAnswerRubric(clarity, depth, accuracy) { return Math.round((clarity + depth + accuracy) / 3); }
 export const DIFFICULTY_LEVELS = ['easy', 'medium', 'hard'];
 export function formatQuizPayload(questions) { return questions.map((q, idx) => ({ id: idx + 1, ...q })); }
+export function calculateStudyStreak(dates) { return Array.isArray(dates) ? dates.length : 0; }
